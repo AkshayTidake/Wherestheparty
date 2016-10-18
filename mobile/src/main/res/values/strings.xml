@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Where\'stheparty</string>
+    <string name="app_name"> Where\'stheparty </string>
+    <string-array name="navigation_drawer_items">
+        <item>profile</item>
+        <item>organize</item>
+        <item>logout</item>
+    </string-array>
 </resources>
