@@ -36,11 +36,12 @@ public class WelcomePage extends AppCompatActivity {
         dl=(DrawerLayout)findViewById(R.id.welcome_page);
         lv=(ListView)findViewById(R.id.list);
 
-        DataModel[] draweritem=new DataModel[3];
+        DataModel[] draweritem=new DataModel[4];
 
-        draweritem[0]=new DataModel("profile");
-        draweritem[1]=new DataModel("organize");
-        draweritem[2]=new DataModel("logout");
+        draweritem[0]=new DataModel("Home");
+        draweritem[1]=new DataModel("Profile");
+        draweritem[2]=new DataModel("Friends List");
+        draweritem[3]=new DataModel("Log Out");
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(true);
 
@@ -66,16 +67,23 @@ public class WelcomePage extends AppCompatActivity {
             Fragment fragment=null;
             switch(position) {
                 case 0:
-                fragment = new ProfileFragment();
+                    startActivity(new Intent(this, WelcomePage.class));
+                    finish();
                     break;
                 case 1:
-                fragment = new OrganizeFragment();
+                    fragment = new ProfileFragment();
+
                     break;
 
                 case 2:
-                startActivity(new Intent(this, MainActivity.class));
+                    fragment = new OrganizeFragment();
+
+                    break;
+                case 3:
+                    startActivity(new Intent(this, MainActivity.class));
                     finish();
                     break;
+
             }
 
 
@@ -89,7 +97,7 @@ public class WelcomePage extends AppCompatActivity {
                 dl.closeDrawer(lv);
             }
             else{
-                Toast.makeText(WelcomePage.this,"error",Toast.LENGTH_LONG).show();
+
             }
         }
 
