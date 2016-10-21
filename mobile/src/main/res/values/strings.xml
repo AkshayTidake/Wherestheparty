@@ -5,4 +5,7 @@
         <item>Profile</item>
         <item>Friends List</item>
     </string-array>
+
+    <string name="facebook_app_id">1168439763191284</string>
+    <string name="fb_login_protocol_scheme">fb1168439763191284</string>
 </resources>

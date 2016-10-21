@@ -17,30 +17,15 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:layout_marginTop="10dp"
-        android:text="What is Club It?\n
-        Club it is a social app which connects partygoers to party host.\n\n
-        How to get started?\n
-        After you login you will be able to browse through parties being hosted.
-        Click on the image or title of the party you are interested in to view details.
-        If you want to join you can click on the “Request to Join “ button.
-        After verifying your credentials your request will be sent to the host or owner of the party.
-        He/She can accept/ deny your request based on their preference.
-        If accepted your name will be shown in the confirmed attendee list.
-        Also a party pass will be sent to you. You can also check status under menu > Your Parties\n\n
-        Can I invite my friends?\n
-        Yes you can. Please use share on FB or Whatapp link.
-        You friends can join after logging in.\n\n
-        Why do you need a Facebook login ?\n
-        We want only real and good people to be part of the community.
-        Hence, social verification is a must. This ensures that the parties are enjoyable without a nusance.\n\n
-        Do you post on Facebook ? Will someone know I signed up?\n
-        We don’t post anything on your Facebook profile. We just show your profile picture with your name. This help us identify who you are. We don’t provide Facebook profile link to anyone, hence no one should be able to abuse the system.\n\n
-        Where are the parties hosted? Are there any risks?\n
-        Parties are hosted at well known pubs, café, etc. with usual security provided by venue. We don’t see any risk as parties are hosted in public places. Private parties can be hosted only by users with a high rating.\n\n
-        Who is a host?\n
-        The Host is the person or club who is arranging the party.\n\n
-        Who can be the host? Can I host a party?\n
-        Only verified individual's can host a party. After you have attended at least three parties with a positive rating, you will be invited to host a party. This is for the security of people attending the parties."
+        android:text="What is Club It?\nClub it is a social app which connects partygoers to party host.\n\nHow to get started?\nAfter you login you will be able to browse through parties being hosted.
+     Click on the image or title of the party you are interested in to view details.If you want to join you can click on the “Request to Join “ button.After verifying your credentials your request will be sent to the host or owner of the party.He/She can accept/ deny your request based on their preference.If accepted your name will be shown in the confirmed attendee list.Also a party pass will be sent to you. You can also check status under menu > Your Parties\n\n
+     Can I invite my friends?\nYes you can. Please use share on FB or Whatapp link.You friends can join after logging in.\n\n
+     Why do you need a Facebook login ?\nWe want only real and good people to be part of the community.
+ Hence, social verification is a must. This ensures that the parties are enjoyable without a nusance.\n\n
+     Do you post on Facebook ? Will someone know I signed up?\n We don’t post anything on your Facebook profile. We just show your profile picture with your name. This help us identify who you are. We don’t provide Facebook profile link to anyone, hence no one should be able to abuse the system.\n\n
+     Where are the parties hosted? Are there any risks?\nParties are hosted at well known pubs, café, etc. with usual security provided by venue. We don’t see any risk as parties are hosted in public places. Private parties can be hosted only by users with a high rating.\n\n
+     Who is a host?\nThe Host is the person or club who is arranging the party.\n\n
+     Who can be the host? Can I host a party?\nOnly verified individual's can host a party. After you have attended at least three parties with a positive rating, you will be invited to host a party. This is for the security of people attending the parties."
         android:gravity="center"
         android:textStyle="bold"
         android:textColor="#fff"
