@@ -25,7 +25,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:id="@+id/logo"
-            android:src="@mipmap/a"
+            android:src="@mipmap/splash"
            android:scaleType="fitXY"/>
 
 

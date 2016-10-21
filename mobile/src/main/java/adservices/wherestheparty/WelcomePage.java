@@ -1,21 +1,17 @@
 package adservices.wherestheparty;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import static android.R.attr.breadCrumbShortTitle;
-import static android.R.attr.fragment;
-import static com.google.android.gms.analytics.internal.zzy.co;
 
 public class WelcomePage extends AppCompatActivity {
 
@@ -26,10 +22,12 @@ public class WelcomePage extends AppCompatActivity {
     private CharSequence dtitle;
     private CharSequence mtitle;
     android.support.v7.app.ActionBarDrawerToggle abdt;
+    Login m;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome_page);
+        m = new Login();
             setUpToolbar();
         mtitle=dtitle=getTitle();
         navdrawerlistitems=getResources().getStringArray(R.array.navigation_drawer_items);
@@ -80,7 +78,7 @@ public class WelcomePage extends AppCompatActivity {
 
                     break;
                 case 3:
-                    startActivity(new Intent(this, MainActivity.class));
+                    startActivity(new Intent(this, Login.class));
                     finish();
                     break;
 
