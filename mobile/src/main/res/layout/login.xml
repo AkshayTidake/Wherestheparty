@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/club">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="* Welcome To Club It *"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        android:fontFamily="cursive"
+        android:shadowColor="#3397D4"
+        android:shadowDx="12"
+        android:shadowDy="12"
+        android:shadowRadius="25"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Party begins here"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:textColor="#fff"
+        android:shadowColor="#3397D4"
+        android:shadowDx="12"
+        android:shadowDy="12"
+        android:shadowRadius="25"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Logo"
+        android:textSize="15sp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:background="@drawable/shape"
+        android:clickable="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:text="FB login is required. But don't worry we don't post anything on your Facebook profile.It is for faster login and authentication."
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="18dp"
+        android:shadowColor="#fff"
+        android:shadowDx="12"
+        android:shadowDy="12"
+        android:shadowRadius="25"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="facebook login"
+        android:textSize="15sp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:background="@drawable/shape"
+        android:clickable="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="12dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="How It Works"
+        android:textSize="15sp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:background="@drawable/shape"
+        android:clickable="true"
+        android:shadowColor="#000"
+        android:shadowDx="12"
+        android:shadowDy="12"
+        android:shadowRadius="25"
+        android:contextClickable="true"
+        android:id="@+id/hiw"/>
+
+</LinearLayout>

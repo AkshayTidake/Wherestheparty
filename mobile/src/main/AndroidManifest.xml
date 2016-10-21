@@ -15,9 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WelcomePage"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Login" />
+        <activity
+            android:name=".WelcomePage"
+            android:parentActivityName=".Login" />
+        <activity android:name=".How_Its_Work"></activity>
     </application>
 
 </manifest>
