@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.facebook.FacebookSdk;
+import com.facebook.login.LoginManager;
+
 
 public class WelcomePage extends AppCompatActivity {
 
@@ -26,6 +29,7 @@ public class WelcomePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.welcome_page);
         m = new Login();
             setUpToolbar();
@@ -78,6 +82,7 @@ public class WelcomePage extends AppCompatActivity {
 
                     break;
                 case 3:
+                    LoginManager.getInstance().logOut();
                     startActivity(new Intent(this, Login.class));
                     finish();
                     break;
