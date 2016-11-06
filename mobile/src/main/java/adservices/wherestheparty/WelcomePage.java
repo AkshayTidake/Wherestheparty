@@ -136,7 +136,6 @@ public class WelcomePage extends AppCompatActivity {
         setSupportActionBar(tb);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-       getSupportActionBar().setIcon(R.drawable.home);
 
     }
 }
