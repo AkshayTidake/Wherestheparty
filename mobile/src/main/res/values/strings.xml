@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"> Where\'stheparty </string>
+    <string name="app_name"> ClubIt </string>
     <string-array name="navigation_drawer_items">
         <item>Home</item>
         <item>Profile</item>

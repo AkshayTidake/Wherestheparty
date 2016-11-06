@@ -41,9 +41,7 @@ public class Login extends FragmentActivity implements View.OnClickListener {
                 @Override
                 public void onSuccess(LoginResult loginResult) {
                     Log.d(TAG, "facebook:onSuccess:" + loginResult);
-
-                    Intent i = new Intent(Login.this, WelcomePage.class);
-                    startActivity(i);
+                    startActivity(new Intent(Login.this,Verify.class));
 
                 }
 
@@ -62,6 +60,7 @@ public class Login extends FragmentActivity implements View.OnClickListener {
             home = (Button)findViewById(R.id.home);
             tv.setOnClickListener(this);
             home.setOnClickListener(this);
+
         }
 
         @Override
@@ -79,7 +78,7 @@ public class Login extends FragmentActivity implements View.OnClickListener {
                     startActivity(i);
                     break;
                 case R.id.login_button:
-                    LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("email", "public_profile"));
+                    LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("email", "public_profile","user_birthday", "user_friends"));
                     break;
                 case R.id.home:
                     Profile.getCurrentProfile();
@@ -96,7 +95,9 @@ public class Login extends FragmentActivity implements View.OnClickListener {
                     break;
             }
         }
-    }
+
+
+}
 
 
 
