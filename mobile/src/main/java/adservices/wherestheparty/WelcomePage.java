@@ -1,6 +1,7 @@
 package adservices.wherestheparty;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,7 +18,7 @@ import com.facebook.login.LoginManager;
 
 
 public class WelcomePage extends AppCompatActivity {
-
+    MediaPlayer mp;
     private String[] navdrawerlistitems;
     private DrawerLayout dl;
     private ListView lv;
@@ -31,6 +32,10 @@ public class WelcomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.welcome_page);
+
+        mp = MediaPlayer.create(this, R.raw.c);
+        mp.start();
+
         m = new Login();
             setUpToolbar();
         mtitle=dtitle=getTitle();
@@ -83,6 +88,7 @@ public class WelcomePage extends AppCompatActivity {
                     break;
                 case 3:
                     LoginManager.getInstance().logOut();
+                    mp.stop();
                     startActivity(new Intent(this, Login.class));
                     finish();
                     break;

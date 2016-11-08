@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
@@ -18,7 +19,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+    MediaPlayer mp;
     TextView tv;
     Profile p;
     @Override
@@ -26,6 +27,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main);
+
+        mp = MediaPlayer.create(this, R.raw.r);
+        mp.start();
+
 
         tv = (TextView)findViewById(R.id.gs);
         tv.setOnClickListener(this);
@@ -54,10 +59,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 p = Profile.getCurrentProfile();
                 if (p != null) {
                     // user has logged in
+                    mp.stop();
                     Intent i = new Intent(MainActivity.this, WelcomePage.class);
                     startActivity(i);
+
                 } else {
                     // user has not logged in
+                    mp.stop();
                     Intent i = new Intent(MainActivity.this, Login.class);
                     startActivity(i);
                 }
