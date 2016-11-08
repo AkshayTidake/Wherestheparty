@@ -2,6 +2,7 @@ package adservices.wherestheparty;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -10,6 +11,7 @@ import android.os.Handler;
  */
 public class SplashScreen extends Activity
 {
+    MediaPlayer mp;
     // Splash screen timer
     private static int SPLASH_TIME_OUT = 3000;
 
@@ -17,7 +19,8 @@ public class SplashScreen extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
+        mp = MediaPlayer.create(this, R.raw.t);
+        mp.start();
         new Handler().postDelayed(new Runnable() {
 
             /*
@@ -29,6 +32,7 @@ public class SplashScreen extends Activity
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
+                mp.stop();
                 Intent i = new Intent(SplashScreen.this, MainActivity.class);
                 startActivity(i);
 
@@ -37,4 +41,6 @@ public class SplashScreen extends Activity
             }
         }, SPLASH_TIME_OUT);
     }
+
+
 }

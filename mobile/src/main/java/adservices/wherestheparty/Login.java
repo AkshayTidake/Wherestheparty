@@ -1,6 +1,7 @@
 package adservices.wherestheparty;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
@@ -28,12 +29,16 @@ public class Login extends FragmentActivity implements View.OnClickListener {
     LoginButton loginButton;
     CallbackManager callbackManager;
     private static final String TAG = "FacebookLogin";
-
+    MediaPlayer mp;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.login);
+
+        mp = MediaPlayer.create(this, R.raw.a);
+        mp.start();
+
         AppEventsLogger.activateApp(this);
         callbackManager = CallbackManager.Factory.create();
             loginButton = (LoginButton) findViewById(R.id.login_button);
@@ -41,7 +46,9 @@ public class Login extends FragmentActivity implements View.OnClickListener {
                 @Override
                 public void onSuccess(LoginResult loginResult) {
                     Log.d(TAG, "facebook:onSuccess:" + loginResult);
+                    mp.stop();
                     startActivity(new Intent(Login.this,Verify.class));
+                    finish();
 
                 }
 
@@ -74,10 +81,12 @@ public class Login extends FragmentActivity implements View.OnClickListener {
         public void onClick (View v){
             switch (v.getId()) {
                 case R.id.hiw:
+                    mp.stop();
                     Intent i = new Intent(this, How_Its_Work.class);
                     startActivity(i);
                     break;
                 case R.id.login_button:
+                    mp.stop();
                     LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("email", "public_profile","user_birthday", "user_friends"));
                     break;
                 case R.id.home:
@@ -85,11 +94,13 @@ public class Login extends FragmentActivity implements View.OnClickListener {
                     p = Profile.getCurrentProfile();
                     if (p != null) {
                         // user has logged in
+                        mp.stop();
                         Intent in = new Intent(Login.this, WelcomePage.class);
                         startActivity(in);
                         finish();
                     } else {
                         // user has not logged in
+                        mp.stop();
                         Toast.makeText(this,"Please Login your account",Toast.LENGTH_LONG).show();
                     }
                     break;

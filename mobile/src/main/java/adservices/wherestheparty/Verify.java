@@ -1,6 +1,7 @@
 package adservices.wherestheparty;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -18,11 +19,15 @@ public class Verify extends AppCompatActivity implements View.OnClickListener {
     Profile p;
     Button b;
     String l;
+    MediaPlayer mp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_verify);
+
+        mp = MediaPlayer.create(this, R.raw.n);
+        mp.start();
 
         profilePictureView = (ProfilePictureView) findViewById(R.id.prp);
         e = (TextView) findViewById(R.id.name);
@@ -41,6 +46,7 @@ public class Verify extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.done:
+                mp.stop();
                 startActivity(new Intent(Verify.this,WelcomePage.class));
                 finish();
                 break;
